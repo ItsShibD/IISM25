@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IISM 2025 – Results & Schedule</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, Inter, sans-serif;
+    background: #0b0f14;
+    color: #eaeaea;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin: 16px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+  }
+
+  /* LEADERBOARD */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #1f2933;
+  }
+
+  th {
+    background: #111827;
+    color: #00e5ff;
+  }
+
+  tr:nth-child(1) { background: rgba(255,215,0,0.18); }
+  tr:nth-child(2) { background: rgba(192,192,192,0.15); }
+  tr:nth-child(3) { background: rgba(205,127,50,0.15); }
+
+  /* CALENDAR */
+  iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 24px;
+    background: #111827;
+  }
+
+  footer {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 14px;
+    margin: 24px 0;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>IISM 2025 – Live Results</h1>
+
+<h2>Leaderboard</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Institute</th>
+      <th>Gold</th>
+      <th>Silver</th>
+      <th>Bronze</th>
+      <th>Finals</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody id="leaderboard"></tbody>
+</table>
+
+<h2>Event Schedule (23–29 December 2025)</h2>
+
+<!-- GOOGLE CALENDAR EMBED -->
+<iframe
+  src="https://calendar.google.com/calendar/embed?mode=AGENDA&dates=20251223/20251230&wkst=1&bgcolor=%230b0f14&ctz=Asia%2FKolkata">
+</iframe>
+
+<footer>
+  Inter Institute Sports Meet (IISM) 2025 • NISER Bhubaneswar
+</footer>
+
+</div>
+
+<script>
+/* ===== MANUAL LEADERBOARD DATA ===== */
+const leaderboardData = [
+  { team:"Bhopal", gold:1, silver:6, bronze:2, finals:7, points:1860 },
+  { team:"NISER", gold:6, silver:1, bronze:5, finals:7, points:1420 },
+  { team:"Berhampur", gold:2, silver:1, bronze:1, finals:3, points:980 },
+  { team:"Pune", gold:1, silver:4, bronze:2, finals:5, points:900 },
+  { team:"Mohali", gold:0, silver:1, bronze:1, finals:1, points:780 },
+  { team:"IISc", gold:0, silver:0, bronze:2, finals:0, points:560 },
+  { team:"Kolkata", gold:2, silver:0, bronze:1, finals:1, points:340 },
+  { team:"TVM", gold:1, silver:1, bronze:0, finals:1, points:220 },
+  { team:"Tirupati", gold:1, silver:0, bronze:0, finals:1, points:140 },
+  { team:"CEBS", gold:0, silver:0, bronze:0, finals:0, points:80 }
+];
+
+function renderLeaderboard() {
+  const tbody = document.getElementById("leaderboard");
+  tbody.innerHTML = "";
+  leaderboardData.forEach((t, i) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${i+1}</td>
+        <td>${t.team}</td>
+        <td>${t.gold}</td>
+        <td>${t.silver}</td>
+        <td>${t.bronze}</td>
+        <td>${t.finals}</td>
+        <td>${t.points}</td>
+      </tr>
+    `;
+  });
+}
+
+renderLeaderboard();
+</script>
+
+</body>
+</html>
