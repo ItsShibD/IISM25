@@ -3,64 +3,112 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>IISM 2025 – Results & Schedule</title>
+<title>IISM 2025 – Results</title>
 
 <style>
+  :root {
+    --bg-main: #0f1412;
+    --bg-card: #151b18;
+    --accent-green: #2dd36f;
+    --accent-orange: #ff8c42;
+    --text-main: #f1f5f3;
+    --text-muted: #9fb0a8;
+    --gold: rgba(255, 200, 0, 0.22);
+    --silver: rgba(190, 190, 190, 0.18);
+    --bronze: rgba(205, 127, 50, 0.2);
+  }
+
   body {
     margin: 0;
     font-family: system-ui, Inter, sans-serif;
-    background: #0b0f14;
-    color: #eaeaea;
+    background: radial-gradient(circle at top, #1b2a22, var(--bg-main));
+    color: var(--text-main);
   }
 
   h1, h2 {
     text-align: center;
-    margin: 16px 0;
+    margin: 18px 0;
+  }
+
+  h1 {
+    color: var(--accent-green);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  h2 {
+    color: var(--accent-orange);
+    font-weight: 600;
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
-    padding: 16px;
+    padding: 18px;
   }
 
-  /* LEADERBOARD */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   th, td {
-    padding: 10px;
+    padding: 12px 10px;
     text-align: center;
-    border-bottom: 1px solid #1f2933;
+    border-bottom: 1px solid #26322c;
   }
 
   th {
-    background: #111827;
-    color: #00e5ff;
+    background: linear-gradient(135deg, #1f7a4d, #ff8c42);
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
   }
 
-  tr:nth-child(1) { background: rgba(255,215,0,0.18); }
-  tr:nth-child(2) { background: rgba(192,192,192,0.15); }
-  tr:nth-child(3) { background: rgba(205,127,50,0.15); }
+  tr:nth-child(1) { background: var(--gold); }
+  tr:nth-child(2) { background: var(--silver); }
+  tr:nth-child(3) { background: var(--bronze); }
 
-  /* CALENDAR */
-  iframe {
-    width: 100%;
-    height: 650px;
-    border: none;
-    border-radius: 12px;
-    margin-top: 24px;
-    background: #111827;
+  tr:hover {
+    background: rgba(45, 211, 111, 0.08);
+    transition: 0.15s ease;
+  }
+
+  .note {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+  }
+
+  .results-table th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .results-table td:first-child {
+    font-weight: 600;
+    color: var(--accent-green);
   }
 
   footer {
     text-align: center;
-    opacity: 0.7;
+    color: var(--text-muted);
     font-size: 14px;
-    margin: 24px 0;
+    margin: 30px 0;
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      font-size: 12px;
+      padding: 8px 5px;
+    }
   }
 </style>
 </head>
@@ -70,75 +118,168 @@
 
 <h1>IISM 2025 – Live Results</h1>
 
+<!-- ================= LEADERBOARD ================= -->
+
 <h2>Leaderboard</h2>
 <table>
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Institute</th>
-      <th>Gold</th>
-      <th>Silver</th>
-      <th>Bronze</th>
-      <th>Finals</th>
-      <th>Points</th>
-    </tr>
-  </thead>
-  <tbody id="leaderboard"></tbody>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Institute</th>
+  <th>Gold</th>
+  <th>Silver</th>
+  <th>Bronze</th>
+  <th>Finals</th>
+  <th>Points</th>
+</tr>
+</thead>
+<tbody id="leaderboard"></tbody>
 </table>
 
 <div class="note">
-  *The leaderboard is cumulative across all completed events.<br>
-  <strong>Last updated on 29th December 2025 16:12AM.</strong>
+  *Leaderboard is cumulative across all completed events.<br>
+  <strong>Last updated on 25th December 2025.</strong>
 </div>
 
-<h2>Event Schedule (23–29 December 2025)</h2>
+<!-- ================= ALL EVENTS ================= -->
 
-<!-- UPDATED GOOGLE CALENDAR EMBED -->
-<iframe
-  src="https://calendar.google.com/calendar/embed?src=d03ec92169fe3d0acbb589e2e0191f0184760855f68e341455297626eb020bdd%40group.calendar.google.com&ctz=Asia%2FKolkata&mode=AGENDA&dates=20251223/20251230&bgcolor=%230b0f14">
-</iframe>
+<h2>Event-wise Results</h2>
+
+<table class="results-table">
+<thead>
+<tr>
+  <th>Sport / Event</th>
+  <th>Category</th>
+  <th>🥇 1st</th>
+  <th>🥈 2nd</th>
+  <th>🥉 3rd</th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td>March Past</td><td>—</td><td>Bhopal</td><td>Berhampur</td><td>Mohali</td></tr>
+
+<tr><td>10000m</td><td>Men</td><td>Kolkata</td><td>TVM</td><td>Bhopal</td></tr>
+<tr><td>5000m</td><td>Women</td><td>TVM</td><td>Pune</td><td>NISER</td></tr>
+
+<tr><td>Long Jump</td><td>Women</td><td>Kolkata</td><td>Berhampur</td><td>NISER</td></tr>
+<tr><td>Long Jump</td><td>Men</td><td>NISER</td><td>Bhopal</td><td>IISc</td></tr>
+
+<tr><td>Discus Throw</td><td>Men</td><td>Pune</td><td>Mohali</td><td>NISER</td></tr>
+<tr><td>Discus Throw</td><td>Women</td><td>Berhampur</td><td>Bhopal</td><td>Mohali</td></tr>
+
+<tr><td>4×400 Relay</td><td>Men</td><td>NISER</td><td>Pune</td><td>IISc</td></tr>
+<tr><td>4×400 Relay</td><td>Women</td><td>NISER</td><td>Bhopal</td><td>Pune</td></tr>
+
+<tr><td>Shot Put</td><td>Men</td><td>NISER</td><td>Pune</td><td>Kolkata</td></tr>
+<tr><td>Shot Put</td><td>Women</td><td>Berhampur</td><td>Bhopal</td><td>Bhopal</td></tr>
+
+<tr><td>1500m</td><td>Men</td><td>NISER</td><td>Pune</td><td>Pune</td></tr>
+<tr><td>1500m</td><td>Women</td><td>Bhopal</td><td>NISER</td><td>NISER</td></tr>
+
+<tr><td>100m</td><td>Men</td><td>NISER</td><td>Bhopal</td><td>NISER</td></tr>
+<tr><td>100m</td><td>Women</td><td>Tirupati</td><td>Bhopal</td><td>Berhampur</td></tr>
+
+<tr><td>Triple Jump</td><td>Women</td><td>Pune</td><td>Berhampur</td><td>Kolkata</td></tr>
+<tr><td>Triple Jump</td><td>Men</td><td>Bhopal</td><td>TVM</td><td>Kolkata</td></tr>
+
+<tr><td>400m</td><td>Women</td><td>Bhopal</td><td>Pune</td><td>Mohali</td></tr>
+<tr><td>400m</td><td>Men</td><td>NISER</td><td>IISc</td><td>Pune</td></tr>
+
+<tr><td>3000m</td><td>Women</td><td>TVM</td><td>Pune</td><td>NISER</td></tr>
+<tr><td>5000m</td><td>Men</td><td>NISER</td><td>Kolkata</td><td>TVM</td></tr>
+
+<tr><td>4×100 Relay</td><td>Mixed</td><td>Bhopal</td><td>Berhampur</td><td>Tirupati</td></tr>
+
+<tr><td>800m</td><td>Women</td><td>Bhopal</td><td>Bhopal</td><td>NISER</td></tr>
+<tr><td>800m</td><td>Men</td><td>Pune</td><td>Bhopal</td><td>NISER</td></tr>
+
+<tr><td>4×400 Relay</td><td>Mixed</td><td>Bhopal</td><td>Tirupati</td><td>NISER</td></tr>
+
+<tr><td>Chess</td><td>—</td><td>Pune</td><td>Kolkata</td><td>IISc</td></tr>
+
+<tr><td>200m</td><td>Men</td><td>NISER</td><td>Bhopal</td><td>NISER</td></tr>
+<tr><td>200m</td><td>Women</td><td>Tirupati</td><td>Bhopal</td><td>NISER</td></tr>
+
+<tr><td>4×100 Relay</td><td>Men</td><td>NISER</td><td>Bhopal</td><td>Berhampur</td></tr>
+<tr><td>4×100 Relay</td><td>Women</td><td>Bhopal</td><td>NISER</td><td>Berhampur</td></tr>
+
+<tr><td>Cricket</td><td>Men</td><td>Bhopal</td><td>IISc</td><td>NISER</td></tr>
+
+<tr><td>Volleyball</td><td>Men</td><td>Bhopal</td><td>NISER</td><td>IISc</td></tr>
+<tr><td>Volleyball</td><td>Women</td><td>IISc</td><td>Berhampur</td><td>NISER</td></tr>
+
+<tr><td>Basketball</td><td>Men</td><td>NISER</td><td>TVM</td><td>Bhopal</td></tr>
+<tr><td>Basketball</td><td>Women</td><td>Kolkata</td><td>Berhampur</td><td>TVM</td></tr>
+
+<tr><td>Kho-Kho</td><td>Men</td><td>Kolkata</td><td>IISc</td><td>Pune</td></tr>
+<tr><td>Kho-Kho</td><td>Women</td><td>Pune</td><td>Bhopal</td><td>IISc</td></tr>
+
+<tr><td>Carrom</td><td>—</td><td>Pune</td><td>IISc</td><td>Kolkata</td></tr>
+
+<tr><td>Tennis</td><td>Men</td><td>IISc</td><td>Pune</td><td>NISER</td></tr>
+<tr><td>Tennis</td><td>Women</td><td>Bhopal</td><td>IISc</td><td>NISER</td></tr>
+<tr><td>Tennis</td><td>Mixed</td><td>Bhopal</td><td>IISc</td><td>Pune</td></tr>
+
+<tr><td>Badminton</td><td>Men</td><td>IISc</td><td>Bhopal</td><td>Kolkata</td></tr>
+<tr><td>Badminton</td><td>Women</td><td>IISc</td><td>Bhopal</td><td>Pune</td></tr>
+<tr><td>Badminton</td><td>Mixed</td><td>IISc</td><td>Bhopal</td><td>Kolkata</td></tr>
+
+<tr><td>Table Tennis</td><td>Men Singles</td><td>IISc</td><td>IISc</td><td>Bhopal</td></tr>
+<tr><td>Table Tennis</td><td>Women Singles</td><td>NISER</td><td>IISc</td><td>IISc</td></tr>
+<tr><td>Table Tennis</td><td>Mixed</td><td>Bhopal</td><td>IISc</td><td>NISER</td></tr>
+<tr><td>Table Tennis</td><td>Men Team</td><td>IISc</td><td>Bhopal</td><td>TVM</td></tr>
+<tr><td>Table Tennis</td><td>Women Team</td><td>IISc</td><td>Bhopal</td><td>NISER</td></tr>
+
+<tr><td>Kabaddi</td><td>Women</td><td>Bhopal</td><td>Berhampur</td><td>NISER</td></tr>
+<tr><td>Kabaddi</td><td>Men</td><td>Bhopal</td><td>NISER</td><td>Berhampur</td></tr>
+
+<tr><td>Football</td><td>Men</td><td>TVM</td><td>Bhopal</td><td>NISER</td></tr>
+<tr><td>Football</td><td>Women</td><td>Kolkata</td><td>TVM</td><td>Tirupati</td></tr>
+
+<tr><td>Javelin</td><td>Men</td><td>Mohali</td><td>NISER</td><td>NISER</td></tr>
+<tr><td>Javelin</td><td>Women</td><td>Kolkata</td><td>Bhopal</td><td>Kolkata</td></tr>
+
+<tr><td>Medley</td><td>Men</td><td>NISER</td><td>Bhopal</td><td>Pune</td></tr>
+<tr><td>Medley</td><td>Women</td><td>Bhopal</td><td>NISER</td><td>Kolkata</td></tr>
+
+</tbody>
+
+</table>
 
 <footer>
-  Inter Institute Sports Meet (IISM) 2025 • NISER Bhubaneswar
+Inter Institute Sports Meet (IISM) 2025 • NISER Bhubaneswar
 </footer>
 
 </div>
 
 <script>
-/* UPDATED LEADERBOARD DATA – 28 DEC 2025 */
 const leaderboardData = [
-  { team:"Bhopal",     gold:14, silver:18, bronze:4, finals:32, points:13000 },
-  { team:"IISc",       gold:8,  silver:9,  bronze:6, finals:17, points:11180 },
-  { team:"NISER",      gold:13, silver:6,  bronze:19,finals:19, points:9680  },
-  { team:"Pune",       gold:6,  silver:7,  bronze:7, finals:13, points:6780  },
-  { team:"Kolkata",    gold:6,  silver:2,  bronze:8, finals:7,  points:6100  },
-  { team:"TVM",        gold:3,  silver:4,  bronze:3, finals:6,  points:4960  },
-  { team:"Berhampur",  gold:2,  silver:5,  bronze:4, finals:7,  points:3900  },
-  { team:"Tirupati",   gold:2,  silver:1,  bronze:2, finals:3,  points:1860  },
-  { team:"Mohali",     gold:1,  silver:1,  bronze:2, finals:2,  points:1820  },
-  { team:"CEBS",       gold:0,  silver:0,  bronze:0, finals:0,  points:40    }
+  { team:"Bhopal", gold:14, silver:18, bronze:4, finals:32, points:13000 },
+  { team:"IISc", gold:8, silver:9, bronze:6, finals:17, points:11180 },
+  { team:"NISER", gold:13, silver:6, bronze:19, finals:19, points:9680 },
+  { team:"Pune", gold:6, silver:7, bronze:7, finals:13, points:6780 },
+  { team:"Kolkata", gold:6, silver:2, bronze:8, finals:7, points:6100 },
+  { team:"TVM", gold:3, silver:4, bronze:3, finals:6, points:4960 },
+  { team:"Berhampur", gold:2, silver:5, bronze:4, finals:7, points:3900 },
+  { team:"Tirupati", gold:2, silver:1, bronze:2, finals:3, points:1860 },
+  { team:"Mohali", gold:1, silver:1, bronze:2, finals:2, points:1820 },
+  { team:"CEBS", gold:0, silver:0, bronze:0, finals:0, points:40 }
 ];
 
-
-function renderLeaderboard() {
-  const tbody = document.getElementById("leaderboard");
-  tbody.innerHTML = "";
-  leaderboardData.forEach((t, i) => {
-    tbody.innerHTML += `
-      <tr>
-        <td>${i+1}</td>
-        <td>${t.team}</td>
-        <td>${t.gold}</td>
-        <td>${t.silver}</td>
-        <td>${t.bronze}</td>
-        <td>${t.finals}</td>
-        <td>${t.points}</td>
-      </tr>
-    `;
-  });
-}
-
-renderLeaderboard();
+const tbody = document.getElementById("leaderboard");
+leaderboardData.forEach((t,i)=>{
+  tbody.innerHTML += `
+    <tr>
+      <td>${i+1}</td>
+      <td>${t.team}</td>
+      <td>${t.gold}</td>
+      <td>${t.silver}</td>
+      <td>${t.bronze}</td>
+      <td>${t.finals}</td>
+      <td>${t.points}</td>
+    </tr>`;
+});
 </script>
 
 </body>
